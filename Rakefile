@@ -3,7 +3,7 @@ require 'echoe'
 Echoe.new("memcached-northscale") do |p|
   p.author = "Sean Lynch"
   p.project = "northscale"
-  p.summary = "An interface to the libmemcached C client."
+  p.summary = "Test gem. Do not use unless you know what you're doing."
   p.url = "http://blog.evanweaver.com/files/doc/fauna/memcached/"
   p.docs_host = "blog.evanweaver.com:~/www/bax/public/files/doc/"
   p.rdoc_pattern = /README|TODO|LICENSE|CHANGELOG|BENCH|COMPAT|exceptions|behaviors|rails.rb|memcached.rb/
