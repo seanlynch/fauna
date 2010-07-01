@@ -85,10 +85,10 @@ class Memcached
     def add(key, value, ttl=@default_ttl, raw=false)
       super(key, value, ttl, !raw)
       # This causes me physical pain.
-      opts[:string_return_types] ? "STORED\r\n" : true
+      "STORED\r\n"
     rescue NotStored # This can still throw exceptions. What's the right behavior if the
                      # server goes away?
-      opts[:string_return_types] ? "NOT STORED\r\n" : false
+      "NOT STORED\r\n"
     end
 
     # Wraps Memcached#delete so that it doesn't raise.
